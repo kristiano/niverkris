@@ -119,20 +119,40 @@
 
             <h2 class="font-oswald text-3xl font-medium mb-6 text-white uppercase tracking-wider drop-shadow-md">Bora Bebemorar!</h2>
             
+            <!-- 📍 BLOCO DE LOCALIZAÇÃO ATUALIZADO -->
             <div class="bg-brand-dark/50 border border-brand-green/30 rounded-xl p-4 mb-6 shadow-inner text-left">
                 <p class="text-slate-100 font-medium text-lg mb-3">
                     <i class="fa-regular fa-calendar-days text-brand-light mr-2 w-5 text-center"></i> 30 de Maio às 13:30
                 </p>
                 
-                <!-- 🔴 Ícone de localização atualizado: maior, vermelho e com pulso -->
-                <a href="https://maps.google.com/?q=Greenblue+Rua+Aririzal+Cohama+Sao+Luis" target="_blank" rel="noopener noreferrer" class="group block text-slate-200 text-sm hover:text-white transition-colors">
-                    <i class="fa-solid fa-location-dot text-accent-red text-2xl mr-3 drop-shadow-[0_0_8px_rgba(227,24,55,0.6)] group-hover:scale-125 transition-transform pulse-icon inline-block align-middle"></i> 
-                    <span class="inline-block align-middle">
-                        <strong>Condomínio Green Blue</strong><br>
-                        <span class="ml-0 sm:ml-1 opacity-80 group-hover:opacity-100 transition-opacity">Rua Aririzal, número 97 - Cohama <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1 opacity-70"></i></span>
-                    </span>
+                <!-- Label destacado -->
+                <p class="text-brand-light font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-map-location-dot"></i> Onde vai ser
+                </p>
+                
+                <!-- Botão de localização clicável -->
+                <a href="https://maps.google.com/?q=Greenblue+Rua+Aririzal+Cohama+Sao+Luis" target="_blank" rel="noopener noreferrer" 
+                   class="group flex items-center gap-3 bg-gradient-to-r from-brand-green/20 to-brand-green/10 hover:from-brand-green/30 hover:to-brand-green/20 border border-brand-green/40 rounded-xl p-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-brand-green/20">
+                    <div class="flex-shrink-0">
+                        <i class="fa-solid fa-location-dot text-accent-red text-3xl drop-shadow-[0_0_10px_rgba(227,24,55,0.8)] pulse-icon"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-white font-bold text-base">Condomínio Green Blue</p>
+                        <p class="text-slate-300 text-sm">Rua Aririzal - Cohama</p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="inline-flex items-center justify-center w-8 h-8 bg-brand-green/30 rounded-full group-hover:bg-brand-green/50 transition-colors">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brand-light text-sm group-hover:scale-110 transition-transform"></i>
+                        </span>
+                    </div>
                 </a>
+                
+                <!-- Dica adicional -->
+                <p class="text-slate-400 text-xs mt-2 text-center">
+                    <i class="fa-solid fa-hand-pointer mr-1"></i> Toque para abrir no Google Maps
+                </p>
             </div>
+            <!-- FIM DO BLOCO DE LOCALIZAÇÃO -->
 
             <div class="h-[1px] w-full bg-gradient-to-r from-transparent via-brand-light/50 to-transparent mb-6"></div>
 
