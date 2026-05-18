@@ -235,7 +235,15 @@
 
         // Global variables provided by the platform environment
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'rsvp-birthday-app';
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+        let firebaseConfig = null;
+        if (typeof __firebase_config !== 'undefined') {
+            try {
+                firebaseConfig = typeof __firebase_config === 'string' ? JSON.parse(__firebase_config) : __firebase_config;
+            } catch (e) {
+                console.error('Erro ao parsear firebase_config:', e);
+                firebaseConfig = null;
+            }
+        }
         const initialToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
 
         // Fallback config to prevent crash if not in intended environment (Mock for visual render)
